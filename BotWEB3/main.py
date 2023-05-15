@@ -28,7 +28,7 @@ async def secondAnswer(message: types.Message):
     keyboard = types.ReplyKeyboardMarkup(keyboard=kb)
     await message.answer("Тут такие вопросы задавать не принято. Мы оба понимаем зачем ты здесь.",reply_markup=keyboard)
 
-@dp.message_handler(lambda message: message.text == "..." or message.text == "Нужна помощь...") #Пояснение работы бота.
+@dp.message_handler(lambda message: message.text == "..." or message.text == "Нужна помощь") #Пояснение работы бота.
 async def InfoAnswer(message: types.Message):
     kb = [
         [types.KeyboardButton(text="Мои критерии")],
